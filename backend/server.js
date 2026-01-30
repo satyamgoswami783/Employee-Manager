@@ -9,7 +9,7 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+app.use(cors({ origin: 'https://employee-manager-iban.onrender.com', credentials: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
